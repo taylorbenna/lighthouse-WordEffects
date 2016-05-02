@@ -36,12 +36,10 @@ int main(int argc, const char * argv[]) {
             printf("Input a String: ");
             fgets(inputChars, 255, stdin);
             strtok(inputChars, "\n");
-            
-            //printf("Your String is: %s", inputChars);
             NSString *inputString = [NSString stringWithUTF8String:inputChars];
-            //NSLog(@"Your input was: %@", inputString);
             
             
+            //Deals with choices
             NSString *choice = [NSString stringWithUTF8String:which];
             
             if ([choice isEqualToString:@"1"]){
@@ -79,7 +77,7 @@ int main(int argc, const char * argv[]) {
                 printf("Your option doesn't exist. Nothing will happen");
             }
             
-            printf("\n\n");
+            printf("\n\n"); //Create space between end of instance and re-loop
         }
         
         
